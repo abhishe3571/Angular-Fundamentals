@@ -18,6 +18,7 @@ body {
 
 button {
   color: blue;
+  padding-top: 10px;
 }
 
 [hidden] {
