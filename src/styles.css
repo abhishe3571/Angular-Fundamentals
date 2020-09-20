@@ -3,12 +3,13 @@ body {
   background-color: #485563;
 }
 .hoverwell:hover {
-  background-color: #485563;
+  background-color: blue;
   cursor: pointer;
 }
 
 .container {
-  padding-top: 10px;
+  padding-top: 20px;
+  margin-left: 50px;
 }
 
 .pointable {
@@ -16,7 +17,7 @@ body {
 }
 
 button {
-  color: #555;
+  color: blue;
 }
 
 [hidden] {
