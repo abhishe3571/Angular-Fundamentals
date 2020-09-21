@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: #485563;
+  background-color: #bbb;
 }
 .hoverwell:hover {
-  background-color: blue;
+  background-color: #485563;
   cursor: pointer;
 }
 
@@ -37,3 +37,6 @@ button {
 .toast-warning {
   background-color: #f89406;
 }
+
+
+
