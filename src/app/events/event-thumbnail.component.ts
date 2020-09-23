@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'event-thumbnail',
   template: `
-    <div>
+    <section class="well hoverwell thumbnail">
       <h2>{{ event?.name }}</h2>
       <div>Date: {{ event?.date }}</div>
       <div [ngStyle]="getStartTimeStyle()" [ngSwitch]="event?.time">
@@ -21,7 +21,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         </span>
       </div>
       <div *ngIf="event?.onlineUrl">OnlineURL: {{ event.onlineUrl }},</div>
-    </div>
+</section>
   `,
   styles: [
     `
@@ -31,7 +31,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
       .pad-left {
         margin-left: 10px;
       }
-      .well div {
+      .well section {
         color: #bbb;
       }
     `,
