@@ -4,7 +4,6 @@
     class="navbar-toggler"
     type="button"
     data-toggle="collapse"
-    data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
     aria-label="Toggle navigation"
@@ -15,12 +14,17 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#"
+        <a [routerLink]="['/events']" routerLinkActive="active" class="nav-link"
           >All Events <span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Create Events</a>
+        <a
+          [routerLink]="['/events/new']"
+          routerLinkActive="active"
+          class="nav-link"
+          >Create Events</a
+        >
       </li>
       <li class="nav-item dropdown">
         <a
@@ -37,11 +41,11 @@
         <span class="caret"></span>
         <ul class="dropdown-menu">
           <li>
-            <a href="">Angular Connect</a><br>
-            <a href="">ng-nl</a><br>
-            <a href="">ng-conferenece2037</a><br>
-            <a href="">ng-vegas</a><br>
-            <a href="">UN Angular Summit</a><br>
+            <a href="">Angular Connect</a><br />
+            <a href="">ng-nl</a><br />
+            <a href="">ng-conferenece2037</a><br />
+            <a href="">ng-vegas</a><br />
+            <a href="">UN Angular Summit</a><br />
           </li>
         </ul>
       </li>
@@ -60,7 +64,7 @@
     </form>
     <ul class="navbar-nav mr-right">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Welcome John</a>
+        <a class="nav-link" [routerLink]="['user/profile']">Welcome John</a>
       </li>
     </ul>
   </div>
