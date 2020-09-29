@@ -1,26 +1,49 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { EventService } from './shared/index';
 
 @Component({
-  template: `
-    <h1>New Evenet</h1>
-    <hr />
-    <div class="col-md-6">
-      <h3>[Create Event Form will go here]</h3>
-      <br />
-      <br />
-      <button type="submit" class="btn btn-primary">Save</button>
-      <button type="button" class="btn btn-default" (click)="cancel()">
-        Cancel
-      </button>
-    </div>
+  templateUrl: 'create-event.component.html',
+  styles: [
+    `
+  em {float:right; color#E05C65; padding-left: 10px;}
+  .error input {backgroung-color:#E3C3C5;}
+  .error ::-webkit-input-placeholder { color: #999; }
+  .error ::-moz-placeholder { color: #999; }
+  .error ::-moz-placeholder { color: #999; }
+  .error ::ms-input-placeholder { color: #999; }
+
   `,
+  ],
 })
 export class CreateEventComponent {
-  // tslint:disable-next-line: no-inferrable-types
+  event:any
   isDirty: boolean = true;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private eventService: EventService) {}
+  
+  ngOnIt() {
+    this.event = {
+      name: 'Ng Spectacular',
+      date: '8/08/2028',
+      time: '10am',
+      price: 799.99,
+      location: {
+        address: '456 Happy St',
+        city: 'Felicity',
+        country: 'Angularistan'
+      },
+      onlineUrl: 'http://ngSpectacular.com',
+      imageUrl: 'http://ngSpectacular.com/logo.png',
+
+    }
+  }
+
+  saveEvent(formValues) {
+    this.eventService.saveEvent(formValues);
+    this.isDirty = false;
+    this.router.navigate(['/events']);
+  }
 
   cancel() {
     this.router.navigate(['/events']);

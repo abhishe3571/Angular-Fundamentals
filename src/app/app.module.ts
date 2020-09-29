@@ -24,6 +24,7 @@ import { Error404Component } from './errors/404.component';
 import { EventDetailsComponent } from './events/event-details/event-deatils.component';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateSessionComponent } from './events/event-details/create-session.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavBarComponent,
     CreateEventComponent,
     Error404Component,
+    CreateSessionComponent
 
   ],
   providers: [
